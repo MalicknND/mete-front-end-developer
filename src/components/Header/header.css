@@ -1,0 +1,68 @@
+.header {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  /* Ajout d'une largeur fixe pour le conteneur du logo */
+  width: 200px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.nav-menu {
+  /* Ajout d'une largeur pour occuper l'espace restant */
+  flex: 1;
+  margin-left: 40px; /* Espace entre le logo et la navigation */
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  /* Centrer les éléments de navigation */
+  justify-content: flex-end;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem; /* Ajoute de l'espace autour des liens */
+}
+
+.nav-menu a:hover {
+  color: #f4ce14;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .logo-container {
+    width: auto;
+    margin: 0 auto;
+  }
+}
