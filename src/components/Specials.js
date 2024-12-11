@@ -1,7 +1,8 @@
-import "./specials.css";
-import lemonDessert from "../../assets/lemon dessert.jpg";
-import greekSalad from "../../assets/greek salad.jpg";
-import bruchetta from "../../assets/bruchetta.svg";
+import "../styles/Home.css";
+// import "../../styles/Specials.css";
+import greekSalad from "../assets/greek salad.jpg";
+import bruschetta from "../assets/bruchetta.svg";
+import lemonDessert from "../assets/lemon dessert.jpg";
 
 function Specials() {
   const specialItems = [
@@ -19,7 +20,7 @@ function Specials() {
       price: "5.99",
       description:
         "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
-      image: bruchetta,
+      image: bruschetta,
     },
     {
       id: 3,
@@ -30,29 +31,29 @@ function Specials() {
       image: lemonDessert,
     },
   ];
-
   return (
-    <section className="specials">
+    <section className="specials-section">
       <div className="specials-header">
-        <h1>This weeks specials!</h1>
-        <button className="menu-button">Online Menu</button>
+        <h2>This weeks specials!</h2>
+        <button className="button-primary">Online Menu</button>
       </div>
+
       <div className="specials-grid">
         {specialItems.map((item) => (
-          <div key={item.id} className="special-card">
-            <img src={item.image} alt={item.name} className="card-image" />
-            <div className="card-content">
-              <div className="card-header">
+          <article key={item.id} className="special-card">
+            <img src={item.image} alt={item.name} />
+            <div className="special-content">
+              <div className="special-header">
                 <h3>{item.name}</h3>
                 <span className="price">${item.price}</span>
               </div>
-              <p className="description">{item.description}</p>
-              <button className="order-button">
+              <p className="special-description">{item.description}</p>
+              <button className="order-link">
                 Order a delivery
-                <span className="delivery-icon">🚗</span>
+                <span>🛵</span>
               </button>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>

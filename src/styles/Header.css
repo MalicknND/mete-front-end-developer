@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: #fff;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.nav-menu {
+  justify-self: center;
+  display: flex;
+  gap: 2rem;
+}
+
+.login-button {
+  justify-self: end;
+}

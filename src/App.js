@@ -1,21 +1,21 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import BookingPage from "./pages/BookingPage";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Main from "./components/Hero/Hero";
-import Footer from "./components/Footer/Footer";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Specials from "./components/Specials/Specials";
+import "./styles/global.css";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <div className="container">
-        <Main />
-        <Specials />
-        <Testimonials />
-        <Footer />
-      </div>
-    </>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/booking" element={<BookingPage />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
