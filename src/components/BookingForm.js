@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function BookingForm() {
+function BookingForm({ availableTimes, dispatch }) {
   const [formData, setFormData] = useState({
     date: "",
     time: "",
@@ -8,17 +8,22 @@ function BookingForm() {
     occasion: "birthday",
   });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "date") {
+      dispatch({ type: "UPDATE_TIMES", payload: value });
+    }
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Ici vous ajouterez la logique pour traiter la réservation
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
   };
 
   return (
@@ -45,11 +50,11 @@ function BookingForm() {
           required
         >
           <option value="">Select a time</option>
-          <option value="17:00">5:00 PM</option>
-          <option value="18:00">6:00 PM</option>
-          <option value="19:00">7:00 PM</option>
-          <option value="20:00">8:00 PM</option>
-          <option value="21:00">9:00 PM</option>
+          {availableTimes.map((time) => (
+            <option key={time} value={time}>
+              {time}
+            </option>
+          ))}
         </select>
       </div>
 
