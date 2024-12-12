@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [formData, setFormData] = useState({
     date: "",
     time: "",
@@ -21,10 +21,9 @@ function BookingForm({ availableTimes, dispatch }) {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Vous pouvez appeler submitAPI ici si nécessaire
+    await submitForm(formData);
   };
 
   return (
