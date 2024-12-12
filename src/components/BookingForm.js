@@ -12,7 +12,7 @@ function BookingForm({ availableTimes, dispatch }) {
     const { name, value } = e.target;
 
     if (name === "date") {
-      dispatch({ type: "UPDATE_TIMES", payload: value });
+      dispatch({ type: "UPDATE_TIMES", payload: value }); // Mettre à jour les horaires
     }
 
     setFormData({
@@ -24,6 +24,7 @@ function BookingForm({ availableTimes, dispatch }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+    // Vous pouvez appeler submitAPI ici si nécessaire
   };
 
   return (
