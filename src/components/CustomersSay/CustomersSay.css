@@ -27,7 +27,7 @@
 @media (max-width: 1120px) {
   .customers-say-container {
     width: 90%;
-    min-height: 100rem;
+    /* min-height: 100rem; */
   }
 
   .customers-say-container::before {
