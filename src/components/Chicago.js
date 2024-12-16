@@ -1,4 +1,4 @@
-// import "../../styles/Hero.css";
+import "../styles/chicago.css";
 import { useNavigate } from "react-router-dom";
 import resto from "../assets/restauranfood.jpg";
 
