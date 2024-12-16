@@ -1,5 +1,4 @@
-import "../styles/Home.css";
-// import "../../styles/Specials.css";
+import "../styles/specials.css";
 import greekSalad from "../assets/greek salad.jpg";
 import bruschetta from "../assets/bruchetta.svg";
 import lemonDessert from "../assets/lemon dessert.jpg";
